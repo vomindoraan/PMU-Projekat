@@ -3,7 +3,6 @@ package rs.ac.bg.etf.running.routes;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-
 import rs.ac.bg.etf.running.R;
 
 public class Route {

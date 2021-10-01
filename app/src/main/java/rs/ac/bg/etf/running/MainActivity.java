@@ -1,60 +1,40 @@
 package rs.ac.bg.etf.running;
 
-import androidx.annotation.NonNull;
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
-
-import android.os.Bundle;
-
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 import dagger.hilt.android.AndroidEntryPoint;
 import rs.ac.bg.etf.running.databinding.ActivityMainBinding;
-import rs.ac.bg.etf.running.workouts.WorkoutListFragmentDirections;
 
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = "running-app-example";
-
     public static final String INTENT_ACTION_WORKOUT = "rs.ac.bg.etf.running.WORKOUT";
 
     private ActivityMainBinding binding;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (savedInstanceState == null) {
-            setupBottomNavigation();
-        }
 
-        if (getIntent().getAction().equals(INTENT_ACTION_WORKOUT)) {
-            NavController navController = BottomNavigationUtil
-                    .changeNavHostFragment(R.id.nav_graph_workouts);
-            if (navController != null) {
-                navController.navigate(WorkoutListFragmentDirections.startWorkout());
-            }
-        }
+        NavHostFragment navHostFragment = (NavHostFragment)
+                getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
+
+        AppBarConfiguration configuration =
+                new AppBarConfiguration.Builder(
+                    R.id.nav_graph_routes, R.id.nav_graph_workouts, R.id.nav_graph_calories)
+                .setOpenableLayout(binding.drawerLayout)
+                .build();
+
+        setSupportActionBar(binding.toolbar);
+        NavigationUI.setupWithNavController(binding.toolbar, navController, configuration);
     }
-
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        setupBottomNavigation();
-    }
-
-    private void setupBottomNavigation() {
-        int[] navResourceIds = new int[]{
-                R.navigation.navigation_routes,
-                R.navigation.navigation_workouts,
-                R.navigation.navigation_calories
-        };
-        BottomNavigationUtil.setup(
-                binding.bottomNavigation,
-                getSupportFragmentManager(),
-                navResourceIds,
-                R.id.nav_host_container
-        );
-    }
-
 }

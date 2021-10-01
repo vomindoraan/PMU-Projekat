@@ -2,15 +2,13 @@ package rs.ac.bg.etf.running.workouts;
 
 import android.content.Context;
 import android.media.MediaPlayer;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 
+import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
-
-import javax.inject.Inject;
 
 public class LifecycleAwarePlayer implements DefaultLifecycleObserver {
 

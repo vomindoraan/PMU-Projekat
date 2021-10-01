@@ -2,15 +2,13 @@ package rs.ac.bg.etf.running.workouts;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import rs.ac.bg.etf.running.data.Workout;
+import rs.ac.bg.etf.running.databinding.ViewHolderWorkoutBinding;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import rs.ac.bg.etf.running.data.Workout;
-import rs.ac.bg.etf.running.databinding.ViewHolderWorkoutBinding;
 
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder> {
 

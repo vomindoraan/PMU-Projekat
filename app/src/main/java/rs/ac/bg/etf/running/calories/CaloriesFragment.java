@@ -2,28 +2,24 @@ package rs.ac.bg.etf.running.calories;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Toast;
-
 import com.google.android.material.textfield.TextInputLayout;
-
-import java.text.NumberFormat;
-import java.text.ParseException;
-
 import rs.ac.bg.etf.running.MainActivity;
 import rs.ac.bg.etf.running.R;
 import rs.ac.bg.etf.running.databinding.FragmentCaloriesBinding;
+
+import java.text.NumberFormat;
+import java.text.ParseException;
 
 public class CaloriesFragment extends Fragment {
 

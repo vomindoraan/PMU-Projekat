@@ -1,18 +1,15 @@
 package rs.ac.bg.etf.running.routes;
 
 import android.os.Bundle;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import rs.ac.bg.etf.running.MainActivity;
 import rs.ac.bg.etf.running.databinding.FragmentRouteDetailsBinding;
 
@@ -46,10 +43,10 @@ public class RouteDetailsFragment extends Fragment {
         Route selectedRoute = routeViewModel.getRoutes().get(
                 RouteDetailsFragmentArgs.fromBundle(requireArguments()).getRouteIndex());
 
-        binding.toolbar.setTitle(selectedRoute.getLabel());
-        binding.toolbar.setNavigationOnClickListener(view -> {
-            navController.navigateUp();
-        });
+//        binding.toolbar.setTitle(selectedRoute.getLabel());
+//        binding.toolbar.setNavigationOnClickListener(view -> {
+//            navController.navigateUp();
+//        });
 
         binding.routeImage.setImageDrawable(selectedRoute.getImage());
         binding.routeLabel.setText(selectedRoute.getLabel());

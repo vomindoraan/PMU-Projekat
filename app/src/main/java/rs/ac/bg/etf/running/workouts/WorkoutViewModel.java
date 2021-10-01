@@ -6,11 +6,10 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
-
-import java.util.List;
-
 import rs.ac.bg.etf.running.data.Workout;
 import rs.ac.bg.etf.running.data.WorkoutRepository;
+
+import java.util.List;
 
 public class WorkoutViewModel extends ViewModel {
 

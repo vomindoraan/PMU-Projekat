@@ -4,18 +4,15 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
+import rs.ac.bg.etf.running.R;
 
+import javax.inject.Inject;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
-
-import javax.inject.Inject;
-
-import rs.ac.bg.etf.running.R;
 
 public class LifecycleAwareMotivator implements DefaultLifecycleObserver {
 

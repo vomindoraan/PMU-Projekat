@@ -1,30 +1,26 @@
 package rs.ac.bg.etf.running.workouts;
 
 import android.os.Bundle;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.google.android.material.textfield.TextInputLayout;
-
-import java.text.Format;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Date;
-
 import dagger.hilt.android.AndroidEntryPoint;
 import rs.ac.bg.etf.running.MainActivity;
 import rs.ac.bg.etf.running.R;
 import rs.ac.bg.etf.running.data.Workout;
 import rs.ac.bg.etf.running.databinding.FragmentWorkoutCreateBinding;
+
+import java.text.Format;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Date;
 
 @AndroidEntryPoint
 public class WorkoutCreateFragment extends Fragment {
@@ -56,8 +52,8 @@ public class WorkoutCreateFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentWorkoutCreateBinding.inflate(inflater, container, false);
 
-        binding.toolbar.setNavigationOnClickListener(
-                view -> navController.navigateUp());
+//        binding.toolbar.setNavigationOnClickListener(
+//                view -> navController.navigateUp());
 
         binding.workoutDateEditText.setOnClickListener(
                 view -> new DatePickerFragment().show(getChildFragmentManager(), null));

@@ -6,14 +6,12 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
+import rs.ac.bg.etf.running.MainActivity;
 
 import javax.inject.Inject;
-
-import rs.ac.bg.etf.running.MainActivity;
 
 public class LifecycleAwareMeasurer implements DefaultLifecycleObserver {
 
