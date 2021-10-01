@@ -35,7 +35,7 @@
         android:hint="@string/calories_edit_text_hint_height"
         app:layout_constraintBaseline_toBaselineOf="@id/weight"
         app:layout_constraintLeft_toRightOf="@id/weight"
-        app:layout_constraintRight_toRightOf="@id/guideline_2"
+        app:layout_constraintRight_toRightOf="@id/_guideline"
         app:suffixText="@string/calories_edit_text_suffix_height">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toTopOf="@id/duration" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_2"
+        android:id="@+id/_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -123,7 +123,7 @@
         android:layout_height="wrap_content"
         android:text="@string/calories_button_text_calculate"
         app:layout_constraintBaseline_toBaselineOf="@id/height"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_2"
+        app:layout_constraintLeft_toLeftOf="@id/_guideline"
         app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
@@ -132,7 +132,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/calories_result_text_size"
         app:layout_constraintBottom_toTopOf="@id/needed"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_2"
+        app:layout_constraintLeft_toLeftOf="@id/_guideline"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate" />
 
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/calories_result_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_2"
+        app:layout_constraintLeft_toLeftOf="@id/_guideline"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/burned" />
 

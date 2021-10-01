@@ -12,6 +12,7 @@
 
     <!-- Routes -->
     <string name="route_browse_toolbar_title">Rute za šetanje</string>
+    <string name="route_details_toolbar_title">Detalji rute</string>
     <string name="route_view_holder_button_text_description">Opis</string>
     <string name="route_view_holder_button_text_location">Lokacija</string>
 
@@ -30,6 +31,7 @@
     <string name="workout_create_button_text_create">Napravi</string>
     <string name="workout_create_edit_text_error_empty">Obavezno polje</string>
     <string name="workout_create_edit_text_error_format">Pogrešan format</string>
+    <string name="workout_start_toolbar_title">Započni trening</string>
     <string name="workout_start_button_text_start">Započni</string>
     <string name="workout_start_button_text_finish">Završi</string>
     <string name="workout_start_button_text_cancel">Odustani</string>

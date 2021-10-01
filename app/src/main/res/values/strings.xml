@@ -12,6 +12,7 @@
 
     <!-- Routes -->
     <string name="route_browse_toolbar_title">Walking Routes</string>
+    <string name="route_details_toolbar_title">Route Details</string>
     <string name="route_view_holder_button_text_description">Description</string>
     <string name="route_view_holder_button_text_location">Location</string>
 
@@ -30,6 +31,7 @@
     <string name="workout_create_button_text_create">Create</string>
     <string name="workout_create_edit_text_error_empty">Field is required</string>
     <string name="workout_create_edit_text_error_format">Wrong format</string>
+    <string name="workout_start_toolbar_title">Start Workout</string>
     <string name="workout_start_button_text_start">Start</string>
     <string name="workout_start_button_text_finish">Finish</string>
     <string name="workout_start_button_text_cancel">Cancel</string>
@@ -61,14 +63,14 @@
     <string name="calories_burned">Burned</string>
     <string name="calories_needed">Needed</string>
     <string name="calories_toast_text_error">Wrong values!</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+
+    <!-- Users -->
+    <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="password_remember">Remember me</string>
+    <string name="log_out">Log out</string>
 
 </resources>
